@@ -5,6 +5,6 @@
     - `npm install` or `yarn install`
     - `node server`
 * In another terminal window
-    - `create-react-app frontend`
     - `cd frontend`
-    - `npm start`
+    - `npm install` or `yarn install`
+    - `npm start` or  `yarn start`

@@ -3,7 +3,7 @@
 * Install and start the api-server
     - `cd api-server`
     - `npm install` or `yarn install`
-    - `node server`
+    - `node server.js`
 * In another terminal window
     - `cd frontend`
     - `npm install` or `yarn install`

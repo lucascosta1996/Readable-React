@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Nav from './Nav';
-import Posts from './Posts/';
-import PostDetail from './PostDetail/';
-import NewPost from './NewPost/';
-import EditPost from './EditPost';
-import PlusButton from './PlusButton';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import Nav from "./Nav";
+import Posts from "./Posts/";
+import PostDetail from "./PostDetail/";
+import NewPost from "./NewPost/";
+import EditPost from "./EditPost";
+import PlusButton from "./PlusButton";
+import NotFound from "./PostDetail/NotFound";
 
-import logo from './../logo.svg';
-import './../App.css';
+import logo from "./../logo.svg";
+import "./../App.css";
 
 class App extends Component {
   render() {
@@ -24,14 +25,15 @@ class App extends Component {
         <div className="container d-flex justify-content-center flex-wrap">
           <div>
             <Switch>
-              <Route exact path ='/' component={Posts} />
-              <Route exact path ='/new' component={NewPost} />
-              <Route exact path ='/edit/:id' component={EditPost} />
-              <Route exact path ='/:category' component={Posts} />
-              <Route exact path ='/:category/:id' component={PostDetail} />
+              <Route exact path="/" component={Posts} />
+              <Route exact path="/new" component={NewPost} />
+              <Route exact path="/edit/:id" component={EditPost} />
+              <Route exact path="/:category" component={Posts} />
+              <Route exact path="/:category/:id" component={PostDetail} />
+              <Route path="*" component={NotFound} />
             </Switch>
-            </div>
-            <PlusButton />
+          </div>
+          <PlusButton />
         </div>
       </div>
     );
